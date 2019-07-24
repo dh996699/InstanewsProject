@@ -5,36 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>InstanNews</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="./build/css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <div class="full-page">
+<div class="full-page">
 <header class="header-logo">
-        <img class="logo" src="assets/images/nyt-logo.svg">
+<img class="logo" src="assets/images/nyt-logo.svg">
 </header>
 
 
 <section>
 <div class="main-page">
     
-
-<!-- <form action="">
-<select>
-        <option>Milk</option>
-        <option>Coffee</option>
-        <option>Tea</option>
+<p> Choose a section:</p>
+<form class="news-selection" action="select">
+<select id="article-select" class="select-option"> 
+        <option value="arts">Arts</option>
+        <option value="sports">Sports</option>
       </select>
-    </form> -->
+    </form>
     </div>
 </section>
 
 
 <footer>
 
-
+<p class="copyright"> © Copyright 2019 INSTANEWS </p>
 
 </footer>
 </div>
 <!--To link JS-->
-<link rel="stylesheet" href="./build/css/style.min.css">
+<script src="./build/js/main.min.js"></script>
+
 </body>
 </html>
