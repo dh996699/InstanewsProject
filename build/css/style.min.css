@@ -1,1 +1,1 @@
-body{background-color:#000}h1{color:#fff}
+body,html{height:100%}body{font-size:1rem;color:#fff;background-color:#000}.full-page{height:100%;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;text-align:center}.full-page,.header-logo img{-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}footer{color:#c2c2c2}
