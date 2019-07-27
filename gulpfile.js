@@ -10,7 +10,7 @@ const gulp = require("gulp"),
 
 gulp.task("watch", function() {
   gulp.watch("js/*.js", gulp.series("scripts"));
-  gulp.watch("sass/*.scss", gulp.series("sass"));
+  gulp.watch("sass/**/*.scss", gulp.series("sass"));
   // gulp.watch("css/*.css", gulp.series("styles"));
   gulp.watch("*.html").on("change", browserSync.reload);
 });
@@ -57,7 +57,7 @@ gulp.task('sass', function() {
     .pipe(
       autoprefixer({
         browsers: ['last 2 versions'],
-      }),
+      })
     )
     .pipe(gulp.dest('./build/css'))
     .pipe(cssnano())

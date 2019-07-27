@@ -1,6 +1,8 @@
-body {
+@import './reset';
+@import './variables';
+@import './mixins';
+@import './font';
+@import './main';
 
 
-background: black;
-    
-}
+//try to avoid writing css in this file.
