@@ -60,7 +60,7 @@ body {
   font-size: 1rem; }
 
 footer {
-  font-size: 20px;
+  font-size: 1rem;
   font-family: 'Open Sans';
   font-weight: 300;
   font-style: normal; }
@@ -88,6 +88,11 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
+.loading {
+  position: absolute;
+  top: 54vh;
+  right: 45vw; }
+
 .header-logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -113,4 +118,6 @@ footer {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center;
+  height: 10vh; }
