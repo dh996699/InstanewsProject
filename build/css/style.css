@@ -93,6 +93,11 @@ body {
   top: 54vh;
   right: 45vw; }
 
+.article-link {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
 .header-logo img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
