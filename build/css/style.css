@@ -73,7 +73,7 @@ body {
   background-color: black; }
 
 .full-page {
-  height: 90vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,12 +93,24 @@ body {
   top: 54vh;
   right: 45vw; }
 
-.article {
-  padding-top: 20px;
+.articles {
+  width: 100%;
   display: grid;
-  grid-template-columns: 50vh;
-  grid-template-rows: repeat(12, 20px);
+  grid-template-columns: 100%;
   grid-gap: 5px; }
+
+.article {
+  position: relative;
+  height: 300px; }
+
+.article-info {
+  color: white;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  padding: 0.625rem; }
 
 .header-logo img {
   -webkit-box-pack: center;
@@ -112,7 +124,8 @@ body {
 
 .select-option {
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 footer {
   display: -webkit-box;

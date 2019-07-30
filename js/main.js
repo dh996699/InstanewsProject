@@ -2,7 +2,7 @@ $(function () {
     $('#article-select').before($('.loading').hide());
     $('#article-select').on('change', function () {
         const select = $(this).val();
-
+        $('.articles').html('');
         $('#article-select').before($('.loading').show());
 
         $.ajax({
@@ -28,13 +28,11 @@ $(function () {
 
                 const htmlTemplate = `
                     <a href="${link}" class="article" style="background: url(${pic}) center/cover;">
-                        <p>${abstract}</p>
+                        <p class="article-info">${abstract}</p>
                     </a>
                 `;
 
                 $('.articles').append(htmlTemplate);
-                // $('.article-link').append(`<div>${pic}</div>`);
-
 
             })
 
