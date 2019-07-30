@@ -93,10 +93,12 @@ body {
   top: 54vh;
   right: 45vw; }
 
-.article-link {
-  height: 100vh;
+.article {
+  padding-top: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 50vh;
+  grid-template-rows: repeat(12, 20px);
+  grid-gap: 5px; }
 
 .header-logo img {
   -webkit-box-pack: center;
