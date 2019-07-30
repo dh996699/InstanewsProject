@@ -5,6 +5,8 @@ $(function () {
         $('.articles').html('');
         $('#article-select').before($('.loading').show());
 
+        $('.logo-header').toggleClass('is-active');
+
         $.ajax({
             method: 'GET',
             url: 'https://api.nytimes.com/svc/topstories/v2/' + select + '.json?api-key=loF5B7QAARl6Au2xTNto2IyPL2A7bmUt'
@@ -34,14 +36,19 @@ $(function () {
 
                 $('.articles').append(htmlTemplate);
 
+
             })
 
         }).fail(function () {
-            console.log("hello");
+            console.log("Please try again!");
         }).always(function () {
             // end of loadAjax
             // hide loading gif
             $('.loading').hide();
+            // $('.logo').css({
+            //     'width': '150px',
+            //     'height': '150px'
+            // });
         });
     });
 

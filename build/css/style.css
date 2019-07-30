@@ -90,7 +90,7 @@ body {
 
 .loading {
   position: absolute;
-  top: 54vh;
+  top: 51vh;
   right: 45vw; }
 
 .articles {
@@ -112,7 +112,7 @@ body {
   bottom: 0px;
   padding: 0.625rem; }
 
-.header-logo img {
+.logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -120,7 +120,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-  text-align: center; }
+  text-align: center;
+  height: auto;
+  width: 220px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.logo-header {
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .logo-header.is-active {
+    text-align: center; }
+    .logo-header.is-active .logo {
+      width: 150px; }
 
 .select-option {
   text-align: center;

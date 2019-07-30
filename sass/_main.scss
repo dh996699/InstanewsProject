@@ -17,7 +17,7 @@ body {
 
 .loading { 
     position: absolute;
-    top: 54vh;
+    top: 51vh;
     right: 45vw;
 }
 
@@ -48,21 +48,63 @@ grid-gap: 5px;
     padding: 0.625rem;
   }
 
-.header-logo img {
+.logo {
     justify-content: center;
     align-items: center;
     padding: 15px;
     text-align: center;
+    height: auto;
+    width: 220px;
+    transition: $transition-speed;
 }
+
+.logo-header {
+    transition: $transition-speed;
+    &.is-active {
+        // display: flex;
+        text-align: center;
+        .logo {
+            width: 150px;
+        }
+    }
+}
+
+// .header-logo-moving {
+
+
+// }
+
+// @keyframes logo-move {
+//     from { top: 50%; 
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//        }
+//     to   { 
+//        top: 0;
+//       left: 50%;
+//     }
+//   }
+
+// .logo-is-moving {
+//  animation-name: logo-move;
+
+//  animation-duration: 10s; /* or: Xms */
+//  animation-iteration-count: 10;
+//  animation-direction: alternate; /* or: normal */
+//  animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+//  animation-fill-mode: forwards; /* or: backwards, both, none */
+//  // animation-delay: 2s;
+//   transform: scale(.7, 1.1);
+//   height: 150px;
+// width: 150px;
+// }  
+
 
 .select-option {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-
-
 }
-
 
 footer {
     display:flex;
@@ -72,6 +114,5 @@ footer {
     align-items: center;
     text-align: center;
     height: 10vh;
-
 }
 
