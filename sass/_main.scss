@@ -141,10 +141,11 @@ footer {
         &.is-active {
             text-align: center;
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: flex-start;
             .logo {
                 width: 68px;
+                margin: 0 80px;
             }
         }
     }

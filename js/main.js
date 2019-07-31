@@ -46,10 +46,10 @@ $(function () {
             // hide loading gif
             $('.loading').hide();
 
-            // if ($('select') == section) {
-            //     console.log(select);
-            //     $('.logo-header').removeClass('is-active');
-            // })
+            if ($('select').val() == "section") {
+                console.log(select);
+                $('.logo-header').removeClass('is-active');
+            }
 
         });
     });
