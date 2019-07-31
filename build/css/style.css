@@ -59,11 +59,23 @@ body {
 .select-option {
   font-size: 1rem; }
 
+.article-info {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal; }
+
 footer {
   font-size: 1rem;
   font-family: 'Open Sans';
   font-weight: 300;
   font-style: normal; }
+
+/* ************  Media @ 600px configuration ****************************/
+@media screen and (min-width: 600px) {
+  .select-option {
+    font-size: 17px; } }
 
 html {
   height: 100%; }
@@ -92,6 +104,9 @@ body {
   position: absolute;
   top: 51vh;
   right: 45vw; }
+
+.article-selection-main {
+  text-align: center; }
 
 .articles {
   width: 100%;
@@ -153,3 +168,60 @@ footer {
           align-items: center;
   text-align: center;
   height: 10vh; }
+
+/* ************  Media @ 600px configuration ****************************/
+@media screen and (min-width: 600px) {
+  .full-page {
+    min-height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; }
+  .article {
+    position: relative;
+    height: 450px; }
+  .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+    height: auto;
+    width: 136px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .logo-header {
+    width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px; }
+    .logo-header.is-active {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      .logo-header.is-active .logo {
+        width: 68px; } }

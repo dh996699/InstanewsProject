@@ -21,19 +21,19 @@ body {
     right: 45vw;
 }
 
+.article-selection-main {
+    text-align: center;
+
+}
+
 .articles {
     width: 100%;
     display: grid;
-// grid-template-columns: repeat(3, 1fr);
 grid-template-columns: 100%;
-// grid-template-rows: repeat(12, 20px);
-
 grid-gap: 5px;
 }
 
 .article {
-    // height: 30vh;
-    // padding: 20px;
     position: relative;
     height: 300px;
 }
@@ -69,37 +69,6 @@ grid-gap: 5px;
     }
 }
 
-// .header-logo-moving {
-
-
-// }
-
-// @keyframes logo-move {
-//     from { top: 50%; 
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//        }
-//     to   { 
-//        top: 0;
-//       left: 50%;
-//     }
-//   }
-
-// .logo-is-moving {
-//  animation-name: logo-move;
-
-//  animation-duration: 10s; /* or: Xms */
-//  animation-iteration-count: 10;
-//  animation-direction: alternate; /* or: normal */
-//  animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-//  animation-fill-mode: forwards; /* or: backwards, both, none */
-//  // animation-delay: 2s;
-//   transform: scale(.7, 1.1);
-//   height: 150px;
-// width: 150px;
-// }  
-
-
 .select-option {
     text-align: center;
     margin-top: 20px;
@@ -116,3 +85,68 @@ footer {
     height: 10vh;
 }
 
+/* ************  Media @ 600px configuration ****************************/
+
+@media screen and (min-width: 600px) {
+
+
+
+
+    .full-page {
+        min-height: 90vh;
+        display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+
+    }
+
+    .articles {
+        width: 100%;
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: 100%;
+    // grid-template-rows: repeat(12, 20px);
+    
+    grid-gap: 5px;
+    }
+
+
+    .article {
+        position: relative;
+        height: 450px;
+    }
+    
+    .logo {
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        text-align: center;
+        height: auto;
+        width: 136px;
+        transition: $transition-speed;
+    }
+
+
+    .logo-header {
+        width: 100%;
+        transition: $transition-speed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+
+        &.is-active {
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            .logo {
+                width: 68px;
+            }
+        }
+    }
+
+}
