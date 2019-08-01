@@ -35,7 +35,7 @@ grid-gap: 5px;
 
 .article {
     position: relative;
-    height: 300px;
+    height: 420px;
 }
 
 .article-info {
@@ -61,7 +61,6 @@ grid-gap: 5px;
 .logo-header {
     transition: $transition-speed;
     &.is-active {
-        // display: flex;
         text-align: center;
         .logo {
             width: 150px;
@@ -90,24 +89,16 @@ footer {
 @media screen and (min-width: 600px) {
 
 
-
-
     .full-page {
         min-height: 90vh;
         display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
-
+        padding:32px;
     }
 
     .articles {
         width: 100%;
         display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: 100%;
-    // grid-template-rows: repeat(12, 20px);
-    
     grid-gap: 5px;
     }
 
@@ -145,9 +136,86 @@ footer {
             align-items: flex-start;
             .logo {
                 width: 68px;
-                margin: 0 80px;
+                margin: 0 10vw;
             }
         }
     }
+
+}
+/* ************  Media @ 1000px configuration ****************************/
+
+@media screen and (min-width: 1000px) {
+    
+    .full-page {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    
+    
+    
+    .articles {
+        width: 100%;
+        display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: 100%;
+    // grid-template-rows: repeat(12, 20px);
+    grid-gap: 5px;
+    }
+
+    .article {
+        position: relative;
+        height: 420px;
+    }
+    
+    .logo {
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        text-align: center;
+        height: auto;
+        width: 220px;
+        transition: $transition-speed;
+    }
+
+
+    .logo-header {
+        width: 100%;
+        transition: $transition-speed;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+
+        &.is-active {
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .logo {
+                width: 68px;
+                margin: 0 70px 0 0;
+            }
+        }
+    }
+    
+    footer {
+        display:flex;
+        color: #c2c2c2;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: right;
+        height: 10vh;
+        padding: 32px;
+    }
+
+
+
 
 }

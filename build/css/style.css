@@ -116,7 +116,7 @@ body {
 
 .article {
   position: relative;
-  height: 300px; }
+  height: 420px; }
 
 .article-info {
   color: white;
@@ -175,7 +175,8 @@ footer {
     min-height: 90vh;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding: 32px; }
   .articles {
     width: 100%;
     display: grid;
@@ -226,4 +227,89 @@ footer {
               align-items: flex-start; }
       .logo-header.is-active .logo {
         width: 68px;
-        margin: 0 80px; } }
+        margin: 0 10vw; } }
+
+/* ************  Media @ 1000px configuration ****************************/
+@media screen and (min-width: 1000px) {
+  .full-page {
+    min-height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px; }
+  .articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px; }
+  .article {
+    position: relative;
+    height: 420px; }
+  .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    text-align: center;
+    height: auto;
+    width: 220px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .logo-header {
+    width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px; }
+    .logo-header.is-active {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      .logo-header.is-active .logo {
+        width: 68px;
+        margin: 0 70px 0 0; }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #c2c2c2;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: right;
+    height: 10vh;
+    padding: 32px; } }
