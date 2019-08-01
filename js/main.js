@@ -15,12 +15,8 @@ $(function () {
         }).done(function (data) {
             const filteredData = data.results.filter(function (item) {
                 return item.multimedia[4] !== undefined;
-                // if (item.multimedia[4] !== undefined) {
-                //     return true
-                // } else { return false }
-            }).slice(0, 12);
 
-            // const results = image.slice(0, 12)
+            }).slice(0, 12);
 
             $.each(filteredData, function (key, value) {
                 console.log(value);
@@ -50,8 +46,16 @@ $(function () {
                 console.log(select);
                 $('.logo-header').removeClass('is-active');
             }
+            $('.article').on('mouseenter', () => {
+                $('.article-info').show()
+            });
+
+            $('.article').on('mouseleave', () => {
+                $('.article-info').hide()
+            });
 
         });
     });
+
 
 }); //End of document ready.
