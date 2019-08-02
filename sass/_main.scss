@@ -152,24 +152,106 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 30px;
+        padding: 5px;
     }
     
     
-    
-    .articles {
+
+    .articles-container {
         width: 100%;
-        display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    // grid-template-columns: 100%;
-    // grid-template-rows: repeat(12, 20px);
-    grid-gap: 5px;
+        min-height: 420px;
+        perspective: 1000px;
+        perspective-origin: center center;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: space-between;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+        transform-origin: center center 0;
+
     }
 
-    .article {
-        position: relative;
+
+    .articles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-areas: "overlap";
+    grid-gap: 5px;
+    position: relative;
+    // flex: 1 1 auto;
+
+        .article {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width:100%;
         height: 420px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // color: whitesmoke;
+        overflow: hidden;
+        cursor: pointer;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 0, 0) rotateY(0);
+        z-index: 2;
+        
+            &.flipped {
+            transform: translate3d(0, 0, 0) rotateY(180deg);
+            }
+        }
+
+      .article-back {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // color: whitesmoke;
+        // overflow: hidden;
+        // backface-visibility: hidden;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        // width: 100%;
+        height: 420px;
+        transform-origin: center center 0;
+        background-color: yellow;
+        transform: translate3d(0, 0, 0) rotateY(-180deg);
+      }
+
+    //   &:nth-of-type(2) {
+    //     .article {
+    //     //   background: linear-gradient(rgba(black, 0.3), rgba(black, 0.3)),
+    //     //     url(https://picsum.photos/600/400?image=702) center/cover;
+    //     }
+    //     .article-back {
+    //     //   background: linear-gradient(rgba(black, 0.3), rgba(black, 0.3)),
+    //     //     url(https://picsum.photos/600/400?image=631) center/cover;
+    //     background-color:yellow;
+    //     }
+    //   }
+
     }
+
+    // .articles {
+    //     width: 25%;
+    //     .article,
+    //     .article-back {
+    //       height: 50vh;
+    //     }
+    //   }
+        
+
+
+    // .article {
+    //     position: relative;
+    //     height: 420px;
+    // }
     
     .logo {
         justify-content: center;

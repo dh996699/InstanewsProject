@@ -25,12 +25,21 @@ $(function () {
                 const link = value.short_url;
 
                 const htmlTemplate = `
-                    <a href="${link}" class="article" style="background: url(${pic}) center/cover;">
-                        <p class="article-info">${abstract}</p>
-                    </a>
+                
+                <div class="article" style="background: url(${pic}) center/cover;">
+                <p class="article-info">${abstract}</p>
+
+                </div >
                 `;
 
+                const htmlTemplateBack = `
+                    <a href="${link}" class="article-back" background-color: coral>
+                        <p class="article-back-info">${abstract}</p>
+                    </a>
+                    `;
+
                 $('.articles').append(htmlTemplate);
+                $('.articles').append(htmlTemplateBack);
 
 
             })
