@@ -50,7 +50,13 @@ $(function () {
                 console.log(select);
                 $('.logo-header').removeClass('is-active');
             }
+            $('.article').on('mouseenter', () => {
+                $('.article-info').show()
+            });
 
+            $('.article').on('mouseleave', () => {
+                $('.article-info').hide()
+            });
         });
     });
 

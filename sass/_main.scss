@@ -13,6 +13,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include tablet {
+        min-height: 90vh;
+        display: flex;
+        padding:5px;
+    }
+    @include desktop {
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+}
 }
 
 .loading { 
@@ -31,11 +44,27 @@ body {
     display: grid;
 grid-template-columns: 100%;
 grid-gap: 5px;
+    @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+}
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 
 .article {
     position: relative;
     height: 420px;
+    @include tablet {
+    height: 450px;
+    }
+    @include desktop {
+    height: 420px;
+    }
 }
 
 .article-info {
@@ -56,6 +85,18 @@ grid-gap: 5px;
     height: auto;
     width: 220px;
     transition: $transition-speed;
+    @include tablet {
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 136px;
+    transition: $transition-speed;
+    }
+    @include desktop {
+    width: 220px;
+    transition: $transition-speed;
+    }
+
 }
 
 .logo-header {
@@ -66,7 +107,35 @@ grid-gap: 5px;
             width: 150px;
         }
     }
-}
+    @include tablet {
+            width: 100%;
+            transition: $transition-speed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 30px;
+    
+            &.is-active {
+                text-align: center;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .logo {
+                    width: 68px;
+                    margin: 0 10vw;
+                }
+            }
+        }
+    @include desktop {
+            &.is-active {
+                .logo {
+                    margin: 0 70px 0 0;
+                }
+            }
+        }
+
+
+    }
 
 .select-option {
     text-align: center;
@@ -82,140 +151,30 @@ footer {
     align-items: center;
     text-align: center;
     height: 10vh;
-}
-
-/* ************  Media @ 600px configuration ****************************/
-
-@media screen and (min-width: 600px) {
-
-
-    .full-page {
-        min-height: 90vh;
-        display: flex;
-        padding:32px;
-    }
-
-    .articles {
-        width: 100%;
-        display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    }
-
-
-    .article {
-        position: relative;
-        height: 450px;
-    }
-    
-    .logo {
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        text-align: center;
-        height: auto;
-        width: 136px;
-        transition: $transition-speed;
-    }
-
-
-    .logo-header {
-        width: 100%;
-        transition: $transition-speed;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 30px;
-
-        &.is-active {
-            text-align: center;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            .logo {
-                width: 68px;
-                margin: 0 10vw;
-            }
+    @include tablet {
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
         }
+    @include desktop {
+    justify-content: flex-start;
+    text-align: right;
+    padding: 32px;
+                }
+    }
+   
+footer p {
+    @include tablet {
+        font-size: $base-font - 0.1rem;
+    }
+
+    @include desktop {
+        font-size: $base-font - 0.1rem;
     }
 
 }
-/* ************  Media @ 1000px configuration ****************************/
 
-@media screen and (min-width: 1000px) {
-    
-    .full-page {
-        min-height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-    }
-    
-    
-    
-    .articles {
-        width: 100%;
-        display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    // grid-template-columns: 100%;
-    // grid-template-rows: repeat(12, 20px);
-    grid-gap: 5px;
-    }
-
-    .article {
-        position: relative;
-        height: 420px;
-    }
-    
-    .logo {
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-        text-align: center;
-        height: auto;
-        width: 220px;
-        transition: $transition-speed;
-    }
-
-
-    .logo-header {
-        width: 100%;
-        transition: $transition-speed;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 30px;
-
-        &.is-active {
-            text-align: center;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            .logo {
-                width: 68px;
-                margin: 0 70px 0 0;
-            }
-        }
-    }
-    
-    footer {
-        display:flex;
-        color: #c2c2c2;
-        display:flex;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: right;
-        height: 10vh;
-        padding: 32px;
-    }
-
-
-
-
+footer span {
+    word-spacing: 2px;
+    text-transform: uppercase;
 }

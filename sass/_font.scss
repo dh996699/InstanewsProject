@@ -4,10 +4,15 @@ body {
     font-family: 'Open Sans';
     font-weight: 300;
     font-style: normal;
+    word-spacing: 2px;
+    line-height: 22px;
 }
 
 .select-option {
    font-size: $base-font;
+   @include tablet {
+    font-size: 17px;
+   }
 
 }
 
@@ -25,12 +30,35 @@ footer {
     font-weight: 300;
     font-style: normal;
 }
-/* ************  Media @ 600px configuration ****************************/
 
-@media screen and (min-width: 600px) {
-    .select-option {
-        font-size: 17px;
-     
-     }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('../../fonts/.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../../fonts/.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSansLight-Italic.woff2') format('woff2'),
+        url('../../fonts/.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../../fonts/.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
