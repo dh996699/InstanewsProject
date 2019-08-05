@@ -1,4 +1,17 @@
 $(function () {
+
+    $('#article-select').on('mouseenter', () => {
+        $('#article-select').animate({
+            fontSize: '24px'
+        }, 200)
+    })
+
+    $('#article-select').on('mouseleave', () => {
+        $('#article-select').animate({
+            fontSize: '16px'
+        }, 200)
+    })
+
     $('#article-select').before($('.loading').hide());
     $('#article-select').on('change', function () {
         const select = $(this).val();
@@ -15,15 +28,9 @@ $(function () {
         }).done(function (data) {
             const filteredData = data.results.filter(function (item) {
                 return item.multimedia[4] !== undefined;
-                // if (item.multimedia[4] !== undefined) {
-                //     return true
-                // } else { return false }
             }).slice(0, 12);
 
-            // const results = image.slice(0, 12)
-
             $.each(filteredData, function (key, value) {
-                console.log(value);
                 const abstract = value.abstract;
                 const pic = value.multimedia[4].url;
                 const link = value.short_url;
@@ -47,7 +54,6 @@ $(function () {
             $('.loading').hide();
 
             if ($('select').val() == "section") {
-                console.log(select);
                 $('.logo-header').removeClass('is-active');
             }
             $('.article').on('mouseenter', () => {
